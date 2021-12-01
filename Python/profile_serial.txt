@@ -1,0 +1,17 @@
+% pprofile serial.py
+3.141592654512391
+Command line: serial.py
+Total duration: 4343.55s
+File: serial.py
+File duration: 4343.53s (100.00%)
+Line #|      Hits|         Time| Time per hit|      %|Source code
+------+----------+-------------+-------------+-------+-----------
+     1|         2|  2.40803e-05|  1.20401e-05|  0.00%|precision=2**31-1
+     2|         1|  2.86102e-06|  2.86102e-06|  0.00%|result = 0
+     3| 536870913|      1115.82|  2.07838e-06| 25.69%|for i in range(1, precision, 4):
+     4| 536870912|      1164.85|   2.1697e-06| 26.82%|    result+=1.0/i
+     5| 536870912|         1007|  1.87568e-06| 23.18%|for i in range(3, precision, 4):
+     6| 536870911|      1055.84|  1.96666e-06| 24.31%|    result-=1.0/i
+     7|         0|            0|            0|  0.00%|
+     8|         1|    0.0218184|    0.0218184|  0.00%|print(result*4)
+pprofile serial.py  4189.84s user 7.54s system 96% cpu 1:12:24.63 total

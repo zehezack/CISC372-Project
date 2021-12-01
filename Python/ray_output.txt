@@ -1,0 +1,34 @@
+#!/bin/bash
+
+PY=$(which python3)
+
+$PY parallel_ray.py 1
+[2m[36m(inv_sum_remote pid=7576)[0m 
+[2m[36m(inv_sum_remote pid=7576)[0m 
+[2m[36m(inv_sum_remote pid=7576)[0m 
+[2m[36m(inv_sum_remote pid=7576)[0m 
+Parallel Reduce result: 3.141592652658431
+end in 0:01:24.162291
+$PY parallel_ray.py 2
+Parallel Reduce result: 3.141592652658431
+end in 0:00:42.954235
+$PY parallel_ray.py 4
+[2m[36m(inv_sum_remote pid=7817)[0m 
+[2m[36m(inv_sum_remote pid=7818)[0m 
+Parallel Reduce result: 3.141592652658431
+end in 0:00:23.164685
+$PY parallel_ray.py 8
+[2m[36m(inv_sum_remote pid=7999)[0m 
+Parallel Reduce result: 3.141592652658431
+end in 0:00:13.952795
+$PY parallel_ray.py 16
+[2m[36m(inv_sum_remote pid=8267)[0m 
+[2m[36m(inv_sum_remote pid=8266)[0m 
+[2m[36m(inv_sum_remote pid=8274)[0m 
+[2m[36m(inv_sum_remote pid=8270)[0m 
+[2m[36m(inv_sum_remote pid=8274)[0m 
+[2m[36m(inv_sum_remote pid=8267)[0m 
+[2m[36m(inv_sum_remote pid=8273)[0m 
+[2m[36m(inv_sum_remote pid=8277)[0m 
+Parallel Reduce result: 3.141592652658431
+end in 0:00:13.857689
