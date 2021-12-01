@@ -10,5 +10,10 @@
 
 #SBATCH -t 00:05:00
 
+nvc -Wall -pg pilieb_serial.cpp -o pilieb_serial_gprof
+./pilieb_serial_gprof
+./pilieb_serial_gprof
+./pilieb_serial_gprof
+./pilieb_serial_gprof
 ./pilieb_serial_gprof
 gprof pilieb_serial_gprof gmon.out > serial_analysis.txt
