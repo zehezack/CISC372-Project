@@ -57,9 +57,7 @@ sbatch profile_script_OMP // result save in corresponding slurm file, this creat
 sbatch profile_script_Serial // result save in gprof_Serial_profiler, this create profiler for Serial code on C <br />
 ```
 Output file contain all the already batched result for testing and checking porpuse. <br />
-    
-  I hate my life
-  
+
 Code for Python
 
 
