@@ -58,7 +58,7 @@ sbatch profile_script_Serial // result save in gprof_Serial_profiler, this creat
 ```
 Output file contain all the already batched result for testing and checking porpuse. <br />
     
-  
+  I hate my life
   
 Code for Python
 
