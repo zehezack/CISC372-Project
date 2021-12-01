@@ -27,13 +27,13 @@ Code for Python requires <br />
 CONFIGURATION
 -------------
 
-INIT
+**INIT**
   Login to bridges - 2
   module load nvhpc/21.7
 
-Code for C++
+**Code for C++**
 
-Code for C <br />
+**Code for C <br />**
 
 scp the content of c onto bridges - 2 <br />
 ```
@@ -58,18 +58,23 @@ sbatch profile_script_Serial // result save in gprof_Serial_profiler, this creat
 ```
 Output file contain all the already batched result for testing and checking porpuse. <br />
 
-Code for Python
+**Code for Python**
 
 
 TROUBLESHOOTING
 ---------------
 
-To be written
+**Code for C++<br />**
+
+**Code for C <br />**
+If any thing display error, check if nvhpc/21.7 is loaded <br />
+
+**Code for Python<br />**
 
 FAQ
 ---
 
-To be written
+Waiting for class
 
 MAINTAINERS
 -----------
