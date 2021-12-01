@@ -1,0 +1,30 @@
+Test with 2^31 - 1 presicion
+Contain serial test, OPENACC and OPENMP 16 8 4 2 core test
+Serial test
+Pi is approximately 3.141592654512391113997e+00
+Time taken: 3 seconds, 795362 microseconds
+Reduction test mp 16 core
+Pi is approximately 3.141592654516635718664e+00
+Time taken: 0 seconds, 304182 microseconds
+Reduction test mp 8 core
+Pi is approximately 3.141592654515355409472e+00
+Time taken: 0 seconds, 490270 microseconds
+Reduction test mp 4 core
+Pi is approximately 3.141592654512630033992e+00
+Time taken: 0 seconds, 981336 microseconds
+Reduction test mp 2 core
+Pi is approximately 3.141592654515921179126e+00
+Time taken: 1 seconds, 960031 microseconds
+Reduction test ACC 16 core
+Pi is approximately 3.141592654516638383200e+00
+Time taken: 0 seconds, 222096 microseconds
+Reduction test ACC 8 core
+Pi is approximately 3.141592654515353189026e+00
+Time taken: 0 seconds, 207596 microseconds
+Reduction test ACC 4 core
+Pi is approximately 3.141592654512630033992e+00
+Time taken: 0 seconds, 413775 microseconds
+Reduction test ACC 2 core
+Pi is approximately 3.141592654515921179126e+00
+Time taken: 0 seconds, 828132 microseconds
+End Test
