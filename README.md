@@ -77,6 +77,24 @@ Output file contain all the already batched result for testing and checking porp
 
 **Code for Python**
 
+In the Python directory:
+create and source a python virtualenv
+```
+python -m venv venv
+source venv/bin/activate
+```
+Install the dependencies for jug and ray.
+```
+pip install jug
+pip install ray
+```
+
+Running the code
+```
+./time_serial.sh
+./time_jug.sh
+./time_ray.sh
+```
 
 TROUBLESHOOTING
 ---------------
