@@ -2,8 +2,6 @@
 #SBATCH -A see200002p
 #SBATCH -p GPU-shared
 #SBATCH -J job1
-#SBATCH --mail-user=youalex@udel.edu
-#SBATCH --mail-type=ALL
 
 #SBATCH --gpus=v100-32:4
 

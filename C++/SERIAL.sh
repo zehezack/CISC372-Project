@@ -2,8 +2,6 @@
 #SBATCH -A see200002p
 #SBATCH -p RM-shared
 #SBATCH -J job1
-#SBATCH --mail-user=youalex@udel.edu
-#SBATCH --mail-type=ALL
 
 #SBATCH -N 1
 #SBATCH -n 1
