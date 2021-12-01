@@ -1,0 +1,17 @@
+#!/bin/sh
+echo python serial 
+python serial
+time python3 ./serial.py
+3.141592654512391
+
+real	1m47.065s
+user	1m47.065s
+sys	0m0.000s
+echo pypy serial
+pypy serial
+time pypy3 ./serial.py
+3.141592654512391
+
+real	0m3.462s
+user	0m3.382s
+sys	0m0.080s
