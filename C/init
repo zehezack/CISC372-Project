@@ -1,0 +1,14 @@
+#! /bin/bash
+#SBATCH -A see200002p
+#SBATCH -p RM-shared
+#SBATCH -J myjob
+#SBATCH -N 1
+#SBATCH -n 16
+#SBATCH -t 24:00:00
+
+echo "Init and produce all executable needed"
+
+nvc cSerial.c -o cSerial
+nvc -acc -gpu=cc70 -Minfo=accel cOpenGPU.c -o cOpenGPU
+nvc -acc -ta=multicore -Minfo=accel cOpenACC.c -o cOpenACC
+nvc -mp cOpenMP.c -o cOpenMP

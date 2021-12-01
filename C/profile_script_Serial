@@ -1,0 +1,11 @@
+#! /bin/bash
+#SBATCH -A see200002p
+#SBATCH -p RM-shared
+#SBATCH -J myjob
+#SBATCH -N 1
+#SBATCH -n 16
+#SBATCH -t 24:00:00
+
+nvc -Wall -pg cSerial.c -o gprof_Serial
+./gprof_Serial
+gprof gprof_Serial gmon.out > gprof_Serial_profiler.txt

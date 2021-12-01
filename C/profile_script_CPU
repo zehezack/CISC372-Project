@@ -1,0 +1,26 @@
+#! /bin/bash
+#SBATCH -A see200002p
+#SBATCH -p RM-shared
+#SBATCH -J myjob
+#SBATCH -N 1
+#SBATCH -n 16
+#SBATCH -t 24:00:00
+
+#echo "Serial profile"
+#nsys profile -o pi_serial_nsys --trace openacc ./cSerial
+
+echo "Reduction test ACC 16 core profile"
+export ACC_NUM_CORES=16
+nsys profile -o pi_OpenACC_16_nsys --trace openacc ./cOpenACC
+
+echo "Reduction test ACC 8 core profile"
+export ACC_NUM_CORES=8
+nsys profile -o pi_OpenACC_8_nsys --trace openacc ./cOpenACC
+
+echo "Reduction test ACC 4 core profile"
+export ACC_NUM_CORES=4
+nsys profile -o pi_OpenACC_4_nsys --trace openacc ./cOpenACC
+
+echo "Reduction test ACC 2 core profile"
+export ACC_NUM_CORES=2
+nsys profile -o pi_OpenACC_2_nsys --trace openacc ./cOpenACC

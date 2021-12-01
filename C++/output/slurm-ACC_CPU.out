@@ -1,0 +1,96 @@
+Test ACC CPU 16 cores
+time (s)= 2.626467
+Pi is approximately 3.141592654516639271378e+00
+time (s)= 3.725436
+Pi is approximately 3.141592654516632165951e+00
+time (s)= 3.605595
+Pi is approximately 3.141592654516639271378e+00
+time (s)= 3.722908
+Pi is approximately 3.141592654516632165951e+00
+time (s)= 3.176435
+Pi is approximately 3.141592654516639271378e+00
+Warning: LBR backtrace method is not supported on this platform. DWARF backtrace method will be used.
+WARNING: OpenACC, cuDNN and cuBLAS rely on CUDA. CUDA tracing has been automatically enabled.
+Collecting data...
+time (s)= 5.036007
+Pi is approximately 3.141592654516642824092e+00
+Processing events...
+Saving temporary "/tmp/nsys-report-efc1-38e0-2b10-0598.qdstrm" file to disk...
+
+Creating final output files...
+Processing [0%                                                                ]Processing [2%                                                                ]Processing [3%                                                                ]Processing [4%                                                                ]Processing [==7%                                                              ]Processing [=====13%                                                          ]Processing [========18%                                                       ]Processing [============24%                                                   ]Processing [===============28%                                                ]Processing [==================32%                                             ]Processing [=====================37%                                          ]Processing [=========================43%                                      ]Processing [============================48%                                   ]Processing [==============================51%                                 ]Processing [===============================52%                                ]Processing [================================54%                               ]Processing [=================================55%                              ]Processing [==================================57%                             ]Processing [===================================58%                            ]Processing [====================================60%                           ]Processing [=====================================62%                          ]Processing [======================================63%                         ]Processing [=======================================65%                        ]Processing [========================================66%                       ]Processing [=========================================68%                      ]Processing [==========================================69%                     ]Processing [===========================================71%                    ]Processing [============================================72%                   ]Processing [=============================================74%                  ]Processing [==============================================75%                 ]Processing [===============================================77%                ]Processing [================================================78%               ]Processing [=================================================80%              ]Processing [==================================================81%             ]Processing [===================================================83%            ]Processing [====================================================84%           ]Processing [=====================================================86%          ]Processing [======================================================87%         ]Processing [=======================================================89%        ]Processing [========================================================90%       ]Processing [=========================================================92%      ]Processing [==========================================================93%     ]Processing [===========================================================95%    ]Processing [============================================================96%   ]Processing [=============================================================98%  ]Processing [==============================================================99% ]Processing [==============================================================100%]Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-efc1-38e0-2b10-0598.qdrep"
+Report file moved to "/jet/home/alexsyou/test/pilieb_acc_CPU_16.qdrep"
+
+Test ACC CPU 8 cores
+time (s)= 2.722665
+Pi is approximately 3.141592654515353189026e+00
+time (s)= 1.915971
+Pi is approximately 3.141592654515356741740e+00
+time (s)= 2.875326
+Pi is approximately 3.141592654515356741740e+00
+time (s)= 1.663078
+Pi is approximately 3.141592654515353189026e+00
+time (s)= 2.371625
+Pi is approximately 3.141592654515353189026e+00
+Warning: LBR backtrace method is not supported on this platform. DWARF backtrace method will be used.
+WARNING: OpenACC, cuDNN and cuBLAS rely on CUDA. CUDA tracing has been automatically enabled.
+Collecting data...
+time (s)= 3.761916
+Pi is approximately 3.141592654515353189026e+00
+Processing events...
+Saving temporary "/tmp/nsys-report-37b6-19bd-df42-6dde.qdstrm" file to disk...
+
+Creating final output files...
+Processing [0%                                                                ]Processing [=====13%                                                          ]Processing [===========22%                                                    ]Processing [================30%                                               ]Processing [========================42%                                       ]Processing [================================54%                               ]Processing [===================================58%                            ]Processing [===================================59%                            ]Processing [===========================================70%                    ]Processing [=================================================80%              ]Processing [=========================================================91%      ]Processing [==============================================================100%]Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-37b6-19bd-df42-6dde.qdrep"
+Report file moved to "/jet/home/alexsyou/test/pilieb_acc_CPU_8.qdrep"
+
+Test ACC CPU 4 cores
+time (s)= 1.659979
+Pi is approximately 3.141592654512628257635e+00
+time (s)= 1.908516
+Pi is approximately 3.141592654512631810348e+00
+time (s)= 1.656144
+Pi is approximately 3.141592654512628257635e+00
+time (s)= 1.658621
+Pi is approximately 3.141592654512631810348e+00
+time (s)= 1.659497
+Pi is approximately 3.141592654512628257635e+00
+Warning: LBR backtrace method is not supported on this platform. DWARF backtrace method will be used.
+WARNING: OpenACC, cuDNN and cuBLAS rely on CUDA. CUDA tracing has been automatically enabled.
+Collecting data...
+time (s)= 1.845326
+Pi is approximately 3.141592654512631810348e+00
+Processing events...
+Saving temporary "/tmp/nsys-report-6961-beb4-4a8d-e649.qdstrm" file to disk...
+
+Creating final output files...
+Processing [0%                                                                ]Processing [1%                                                                ]Processing [3%                                                                ]Processing [========17%                                                       ]Processing [===================34%                                            ]Processing [==============================51%                                 ]Processing [=========================================68%                      ]Processing [==========================================69%                     ]Processing [=========================================================92%      ]Processing [==============================================================100%]Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-6961-beb4-4a8d-e649.qdrep"
+Report file moved to "/jet/home/alexsyou/test/pilieb_acc_CPU_4.qdrep"
+
+Test ACC CPU 2 cores
+time (s)= 1.660960
+Pi is approximately 3.141592654515921623215e+00
+time (s)= 1.658162
+Pi is approximately 3.141592654515921623215e+00
+time (s)= 1.658295
+Pi is approximately 3.141592654515921623215e+00
+time (s)= 1.657504
+Pi is approximately 3.141592654515921623215e+00
+time (s)= 1.656531
+Pi is approximately 3.141592654515921623215e+00
+Warning: LBR backtrace method is not supported on this platform. DWARF backtrace method will be used.
+WARNING: OpenACC, cuDNN and cuBLAS rely on CUDA. CUDA tracing has been automatically enabled.
+Collecting data...
+time (s)= 1.801023
+Pi is approximately 3.141592654515921623215e+00
+Processing events...
+Saving temporary "/tmp/nsys-report-2184-2ef0-6ffc-fe6a.qdstrm" file to disk...
+
+Creating final output files...
+Processing [0%                                                                ]Processing [=========19%                                                      ]Processing [======================38%                                         ]Processing [===================================58%                            ]Processing [==========================================69%                     ]Processing [==========================================================93%     ]Processing [==============================================================100%]Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-2184-2ef0-6ffc-fe6a.qdrep"
+Report file moved to "/jet/home/alexsyou/test/pilieb_acc_CPU_2.qdrep"
+

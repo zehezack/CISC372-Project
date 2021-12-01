@@ -1,0 +1,32 @@
+nsys and ncu for ACC_GPU
+time (s)= 0.346805
+Pi is approximately 3.141592654521112137900e+00
+time (s)= 0.337392
+Pi is approximately 3.141592654521112137900e+00
+time (s)= 0.334639
+Pi is approximately 3.141592654521112137900e+00
+time (s)= 0.334434
+Pi is approximately 3.141592654521112137900e+00
+time (s)= 0.337029
+Pi is approximately 3.141592654521112137900e+00
+WARNING: OpenACC, cuDNN and cuBLAS rely on CUDA. CUDA tracing has been automatically enabled.
+Collecting data...
+time (s)= 0.353768
+Pi is approximately 3.141592654521112137900e+00
+Processing events...
+Saving temporary "/tmp/nsys-report-35b8-0808-0fad-7265.qdstrm" file to disk...
+
+Creating final output files...
+Processing [0%                                                                ]Processing [2%                                                                ]Processing [======14%                                                         ]Processing [=============25%                                                  ]Processing [=================================55%                              ]Processing [=====================================62%                          ]Processing [==========================================69%                     ]Processing [===========================================70%                    ]Processing [===========================================71%                    ]Processing [===============================================76%                ]Processing [===============================================77%                ]Processing [================================================78%               ]Processing [=================================================79%              ]Processing [=================================================80%              ]Processing [=====================================================85%          ]Processing [=====================================================86%          ]Processing [======================================================87%         ]Processing [=======================================================88%        ]Processing [=======================================================89%        ]Processing [========================================================90%       ]Processing [=========================================================91%      ]Processing [=========================================================92%      ]Processing [==========================================================93%     ]Processing [===========================================================94%    ]Processing [===========================================================95%    ]Processing [============================================================96%   ]Processing [=============================================================97%  ]Processing [=============================================================98%  ]Processing [==============================================================99% ]Processing [==============================================================100%]Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-35b8-0808-0fad-7265.qdrep"
+Report file moved to "/jet/home/alexsyou/test/pilieb_acc_gpu_nsys.qdrep"
+
+==PROF== Connected to process 85802 (/jet/home/alexsyou/test/pilieb_acc_nvc_GPU)
+==PROF== Profiling "main_13_gpu" - 1: 0%....50%....100% - 72 passes
+==PROF== Profiling "main_13_gpu__red" - 2: 0%....50%....100% - 71 passes
+==PROF== Profiling "main_17_gpu" - 3: 0%....50%....100% - 72 passes
+==PROF== Profiling "main_17_gpu__red" - 4: 0%....50%....100% - 71 passes
+time (s)= 5.923979
+Pi is approximately 3.141592654521112137900e+00
+==PROF== Disconnected from process 85802
+==PROF== Report: /jet/home/alexsyou/test/pilieb_acc_gpu_ncu.ncu-rep

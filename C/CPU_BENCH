@@ -1,0 +1,50 @@
+#! /bin/bash
+#SBATCH -A see200002p
+#SBATCH -p RM-shared
+#SBATCH -J myjob
+#SBATCH -N 1
+#SBATCH -n 16
+#SBATCH -t 24:00:00
+
+echo "Test with 2^31 - 1 presicion"
+echo "Contain serial test, OPENACC and OPENMP 16 8 4 2 core test"
+
+echo "Serial test"
+./cSerial
+
+echo "Reduction test mp 16 core"
+export OMP_NUM_THREADS=16
+./cOpenMP
+
+echo "Reduction test mp 8 core"
+export OMP_NUM_THREADS=8
+./cOpenMP
+
+echo "Reduction test mp 4 core"
+export OMP_NUM_THREADS=4
+./cOpenMP
+
+echo "Reduction test mp 2 core"
+export OMP_NUM_THREADS=2
+./cOpenMP
+
+echo "Reduction test ACC 16 core"
+export ACC_NUM_CORES=16
+./cOpenACC
+
+echo "Reduction test ACC 8 core"
+export ACC_NUM_CORES=8
+./cOpenACC
+
+echo "Reduction test ACC 4 core"
+export ACC_NUM_CORES=4
+./cOpenACC
+
+echo "Reduction test ACC 2 core"
+export ACC_NUM_CORES=2
+./cOpenACC
+
+
+echo "End Test"
+
+

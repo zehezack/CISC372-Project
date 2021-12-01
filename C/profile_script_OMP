@@ -1,0 +1,27 @@
+#! /bin/bash
+#SBATCH -A see200002p
+#SBATCH -p RM-shared
+#SBATCH -J myjob
+#SBATCH -N 1
+#SBATCH -n 16
+#SBATCH -t 24:00:00
+
+
+echo "profiling OMP code with 16 thread"
+export OMP_NUM_THREADS=16
+perf stat -d ./cOpenMP
+
+
+echo "profiling OMP code with 8 thread"
+export OMP_NUM_THREADS=8
+perf stat -d ./cOpenMP
+
+
+echo "profiling OMP code with 4 thread"
+export OMP_NUM_THREADS=4
+perf stat -d ./cOpenMP
+
+
+echo "profiling OMP code with 2 thread"
+export OMP_NUM_THREADS=2
+perf stat -d ./cOpenMP
