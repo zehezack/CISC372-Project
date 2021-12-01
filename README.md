@@ -64,5 +64,5 @@ MAINTAINERS
 Current maintainers:
  * Zehe Zack Luan - zehezack@udel.edu
  * Alex You - youalex@udel.edu
- * JD Wang - jiandong@udel.edu
+ * JD Wang - jiandong@udel.edu 
 
