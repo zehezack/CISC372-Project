@@ -1,5 +1,5 @@
 #!/bin/sh
 echo python serial 
-time python ./serial.py
+time python3 ./serial.py
 echo pypy serial
-time pypy ./serial.py
+time pypy3 ./serial.py

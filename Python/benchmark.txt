@@ -1,0 +1,738 @@
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% python -m venv venv
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% source ./venv/bin/activate
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% which pip
+
+/home/jd/Projects/CISC372-Project/Python/venv/bin/pip
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% pip Jug
+
+Collecting Jug
+  Using cached Jug-2.1.1.tar.gz (68 kB)
+Collecting six
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using legacy 'setup.py install' for Jug, since package 'wheel' is not installed.
+Installing collected packages: six, Jug
+    Running setup.py install for Jug ... - done
+Successfully installed Jug-2.1.1 six-1.16.0
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the '/home/jd/Projects/CISC372-Project/Python/venv/bin/python -m pip install --upgrade pip' command.
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% sh ./time_serial.sh
+
+python serial
+3.141592654512391
+
+real	2m1.279s
+user	2m1.279s
+sys	0m0.000s
+pypy serial
+3.14159265451
+
+real	0m3.452s
+user	0m3.442s
+sys	0m0.010s
+sh ./time_serial.sh  124.72s user 0.01s system 99% cpu 2:04.73 total
+%                                                                                                                                                                                                  
+ 
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% sh ./time_serial.sh
+
+Python.md  jugfile.jugdata  jugfile.py  parallel.sh  parallel1.py  parallel2.py  print_parallel.py  serial.py  serial1.py  time_serial.sh  typescript  venv
+%                                                                                                                                                                                                  
+ 
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -rf jugfile.jugdata/  
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% pparallel.pysparallel.py pparallel.pypyparallel.pytparallel.pyhparallel.pyoparallel.pynparallel.py    p    allel.py llel.py lel.py el.py l.py .py py y  ssh parallel.sh 1
+
+number of thread is  1
+      Failed     Waiting       Ready    Complete      Active  Task name                                                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0           0       16384           0           0  jug.mapreduce._jug_map_reduce                                                                                                        
+           0        2342           0           0           0  jug.mapreduce._jug_reduce                                                                                                            
+           0           1           0           0           0  jugfile.get_final_result                                                                                                             
+...................................................................................................................................................................................................
+           0        2343       16384           0           0  Total                                                                                                                                
+
+running with 1 threads
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+       16384           0  jug.mapreduce._jug_map_reduce                                                                                                                                            
+        2342           0  jug.mapreduce._jug_reduce                                                                                                                                                
+           1           0  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+       18727           0  Total                                                                                                                                                                    
+
+4m 48s
+Result: 3.1415926545209345
+sh parallel.sh 1  220.58s user 7.33s system 77% cpu 4:52.37 total
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% sh parallel.sh 2
+
+number of thread is  2
+      Failed     Waiting       Ready    Complete      Active  Task name                                                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0           0           0       16384           0  jug.mapreduce._jug_map_reduce                                                                                                        
+           0           0           0        2342           0  jug.mapreduce._jug_reduce                                                                                                            
+           0           0           0           1           0  jugfile.get_final_result                                                                                                             
+...................................................................................................................................................................................................
+           0           0           0       18727           0  Total                                                                                                                                
+
+running with 2 threads
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0       16384  jug.mapreduce._jug_map_reduce                                                                                                                                            
+           0        2342  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+           0       18727  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0       16384  jug.mapreduce._jug_map_reduce                                                                                                                                            
+           0        2342  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+           0       18727  Total                                                                                                                                                                    
+
+0m 5s
+Result: 3.1415926545209345
+sh parallel.sh 2  16.86s user 0.98s system 216% cpu 8.239 total
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -r jugfile.jugdata
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -r jugfile.jugdatash parallel.sh 2     
+
+number of thread is  2
+      Failed     Waiting       Ready    Complete      Active  Task name                                                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0           0       16384           0           0  jug.mapreduce._jug_map_reduce                                                                                                        
+           0        2342           0           0           0  jug.mapreduce._jug_reduce                                                                                                            
+           0           1           0           0           0  jugfile.get_final_result                                                                                                             
+...................................................................................................................................................................................................
+           0        2343       16384           0           0  Total                                                                                                                                
+
+running with 2 threads
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        8186          41  jug.mapreduce._jug_map_reduce                                                                                                                                            
+        1172          19  jug.mapreduce._jug_reduce                                                                                                                                                
+           1           0  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        9359          60  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        8198          34  jug.mapreduce._jug_map_reduce                                                                                                                                            
+        1170          19  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        9368          54  Total                                                                                                                                                                    
+
+2m 43s
+Result: 3.1415926545209345
+sh parallel.sh 2  220.27s user 7.82s system 137% cpu 2:46.47 Total
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -r jugfile.jugdata
+
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -r jugfile.jugdatash parallel.sh 4     
+
+number of thread is  4
+      Failed     Waiting       Ready    Complete      Active  Task name                                                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0           0       16384           0           0  jug.mapreduce._jug_map_reduce                                                                                                        
+           0        2342           0           0           0  jug.mapreduce._jug_reduce                                                                                                            
+           0           1           0           0           0  jugfile.get_final_result                                                                                                             
+...................................................................................................................................................................................................
+           0        2343       16384           0           0  Total                                                                                                                                
+
+running with 4 threads
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        4105         785  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         589         386  jug.mapreduce._jug_reduce                                                                                                                                                
+           1           0  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        4695        1171  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        4094         825  jug.mapreduce._jug_map_reduce                                                                                                                                            
+        4099         789  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         586         282  jug.mapreduce._jug_reduce                                                                                                                                                
+         589         362  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        4685        1072  Total                                                                                                                                                                    
+
+        4683        1188  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        4086         758  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         578         389  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        4664        1148  Total                                                                                                                                                                    
+
+1m 58s
+Result: 3.1415926545209345
+sh parallel.sh 4  253.22s user 10.39s system 217% cpu 2:01.18 total
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -r jugfile.jugdata
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -r jugfile.jugdatash parallel.sh 8
+
+number of thread is  8
+      Failed     Waiting       Ready    Complete      Active  Task name                                                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0           0       16384           0           0  jug.mapreduce._jug_map_reduce                                                                                                        
+           0        2342           0           0           0  jug.mapreduce._jug_reduce                                                                                                            
+           0           1           0           0           0  jugfile.get_final_result                                                                                                             
+...................................................................................................................................................................................................
+           0        2343       16384           0           0  Total                                                                                                                                
+
+running with 8 threads
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        2047        2016  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         293         374  jug.mapreduce._jug_reduce                                                                                                                                                
+           1           0  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        2341        2390  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        2054        1903  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         291         429  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        2345        2333  Total                                                                                                                                                                    
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        2031        2078  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         291         414  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        2322        2493  Total                                                                                                                                                                    
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        2063        2040  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         298         350  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        2361        2391  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        2047        2072  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         289         398  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        2336        2471  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+
+Use the --will-cite option to suppress this message
+
+(Or set will_cite = True in the Jug configuration file)
+Use the --will-cite option to suppress this message
+
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        2048        2069  jug.mapreduce._jug_map_reduce                                                                                                                                            
+        2058        1948  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         298         432  jug.mapreduce._jug_reduce                                                                                                                                                
+         289         399  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+...................................................................................................................................................................................................
+        2347        2348  Total                                                                                                                                                                    
+        2346        2502  Total                                                                                                                                                                    
+
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        2036        2037  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         293         391  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        2329        2429  Total                                                                                                                                                                    
+
+1m 16s
+Result: 3.1415926545209345
+sh parallel.sh 8  297.69s user 14.83s system 393% cpu 1:19.35 total
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% rm -r jugfile.jugdata
+
+jd@pc ~/Projects/CISC372-Project/Python (git)-[main] 
+% parallel.sh 16
+
+number of thread is  16
+      Failed     Waiting       Ready    Complete      Active  Task name                                                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+           0           0       16382           0           2  jug.mapreduce._jug_map_reduce                                                                                                        
+           0        2342           0           0           0  jug.mapreduce._jug_reduce                                                                                                            
+           0           1           0           0           0  jugfile.get_final_result                                                                                                             
+...................................................................................................................................................................................................
+           0        2343       16382           0           2  Total                                                                                                                                
+
+running with 16 threads
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1034        2182  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         151         286  jug.mapreduce._jug_reduce                                                                                                                                                
+           1           0  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1186        2468  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1023        2237  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         142         373  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1165        2611  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1025        2314  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         148         304  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+    Executed      Loaded  Task name                                                                                                                                                                
+...................................................................................................................................................................................................
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1173        2619  Total                                                                                                                                                                    
+
+        1021        2197  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         144         377  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1165        2575  Total                                                                                                                                                                    
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1028        2410  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         147         337  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1175        2748  Total                                                                                                                                                                    
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1017        2239  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         148         335  jug.mapreduce._jug_reduce                                                                                                                                                
+        1012        2442  jug.mapreduce._jug_map_reduce                                                                                                                                            
+           0           1  jugfile.get_final_result                                                                                                                                                 
+         145         303  jug.mapreduce._jug_reduce                                                                                                                                                
+...................................................................................................................................................................................................
+        1165        2575  Total                                                                                                                                                                    
+
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1157        2746  Total                                                                                                                                                                    
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1026        2352  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         144         366  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1170        2719  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1034        2276  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         147         344  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1181        2621  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1030        2399  jug.mapreduce._jug_map_reduce                                                                                                                                            
+        1031        2159  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         146         323  jug.mapreduce._jug_reduce                                                                                                                                                
+         150         319  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1176        2723  Total                                                                                                                                                                    
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1181        2479  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1024        2417  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         148         358  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1172        2776  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1019        2210  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         150         324  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1169        2535  Total                                                                                                                                                                    
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1025        2354  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         143         314  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1168        2669  Total                                                                                                                                                                    
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1021        2350  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         144         343  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1165        2694  Total                                                                                                                                                                    
+
+
+If you use Jug in a published research paper please cite
+    Coelho, L.P., (2017). Jug: Software for Parallel Reproducible Computation in
+    Python. Journal of Open Research Software. 5(1), p.30.
+
+    http://doi.org/10.5334/jors.161
+
+Use the --will-cite option to suppress this message
+(Or set will_cite = True in the Jug configuration file)
+
+    Executed      Loaded  Task name                                                                                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        1014        2380  jug.mapreduce._jug_map_reduce                                                                                                                                            
+         145         362  jug.mapreduce._jug_reduce                                                                                                                                                
+           0           1  jugfile.get_final_result                                                                                                                                                 
+...................................................................................................................................................................................................
+        1159        2743  Total                                                                                                                                                                    
+
+0m 59s
+Result: 3.1415926545209345
+sh parallel.sh 16  448.59s user 29.19s system 765% cpu 1:02.39 total
+%                                                                                                                                                                                                  
