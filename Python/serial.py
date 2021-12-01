@@ -1,4 +1,4 @@
-precision=2**32
+precision=2**31-1
 result = 0
 for i in range(1, precision, 4):
     result+=1.0/i
