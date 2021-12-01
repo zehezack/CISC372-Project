@@ -5,8 +5,6 @@ CONTENTS OF THIS FILE
 
  * Introduction
  * Requirements
- * Recommended modules
- * Installation
  * Configuration
  * Troubleshooting
  * FAQ
@@ -20,14 +18,22 @@ The project is intended as to display different programming language processing 
 REQUIREMENTS
 ------------
 
-This module requires no modules outside of standard C, C++, Python library
+This module requires standard C, C++, Python library
+Code require access to bridges - 2
+Code for C++ requires
+Code for C requires nvhpc/21.7, gprof, perf.
+Code for Python requires
 
 CONFIGURATION
 -------------
 
-The module has no menu or modifiable settings. There is no configuration. When
-enabled, the module will prevent the links from appearing. To get the links
-back, disable the module and clear caches.
+Code for C++
+
+Code for C
+  
+
+Code for Python
+
 
 TROUBLESHOOTING
 ---------------
