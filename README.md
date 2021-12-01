@@ -20,7 +20,7 @@ REQUIREMENTS
 
 This module requires standard C, C++, Python library <br />
 Code require access to bridges - 2 <br />
-Code for C++ requires <br />
+Code for C++ requires nvhpc/21.7, gprof, perf. <br />
 Code for C requires nvhpc/21.7, gprof, perf. <br />
 Code for Python requires <br />
 
@@ -32,6 +32,23 @@ CONFIGURATION
   module load nvhpc/21.7
 
 **Code for C++**
+
+scp the content of C++ onto bridges2 <br />
+```
+scp -P 2222 *.sh *.cpp <name>@data.bridges2.psc.edu:~/372_fall2021/c++
+```
+Init the executables (Bridges2 must finish this step to proceed) <br />
+```
+sbatch INIT.sh
+```
+Running the code
+```
+sbatch ACC_CPU.sh
+sbatch ACC_GPU.sh
+sbatch OMP.sh
+sbatch SERIAL.sh
+```
+Output folder contains already batched results for testing and checking <br />
 
 **Code for C <br />**
 
@@ -65,6 +82,8 @@ TROUBLESHOOTING
 ---------------
 
 **Code for C++<br />**
+Check if nvhpc/21.7 is loaded <br />
+Otherwise, read the error messages.
 
 **Code for C <br />**
 If any thing display error, check if nvhpc/21.7 is loaded <br />
