@@ -17,5 +17,5 @@ echo running with $1 threads
 wait
 duration=$SECONDS
 date -u -d @"$duration" +'%-Mm %-Ss'
-$PY print_parallel.py
+$PY print_parallel_jug.py
 
