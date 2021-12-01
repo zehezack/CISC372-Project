@@ -1,0 +1,4 @@
+Test with 2^31 - 1 presicion
+Testing OpenACC GPU time
+Pi is approximately 3.141592654521115246524e+00
+Time taken: 0 seconds, 225415 microseconds

@@ -1,0 +1,17 @@
+Initializing executables for C++
+main:
+     13, Generating Tesla code
+         15, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+             Generating reduction(+:result_add)
+     13, Generating implicit copy(result_add) [if not already present]
+     17, Generating Tesla code
+         19, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+             Generating reduction(+:result_minus)
+     17, Generating implicit copy(result_minus) [if not already present]
+main:
+     13, Generating Multicore code
+         15, #pragma acc loop gang
+     13, Generating reduction(+:result_add)
+     17, Generating Multicore code
+         19, #pragma acc loop gang
+     17, Generating reduction(+:result_minus)
