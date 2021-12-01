@@ -17,6 +17,7 @@ export OMP_NUM_THREADS=16
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
+perf stat -d ./pilieb_mp_nvc
 
 echo "C++ OMP with 8 threads"
 export OMP_NUM_THREADS=8
@@ -25,6 +26,7 @@ export OMP_NUM_THREADS=8
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
+perf stat -d ./pilieb_mp_nvc
 
 echo "C++ OMP with 4 threads"
 export OMP_NUM_THREADS=4
@@ -33,6 +35,7 @@ export OMP_NUM_THREADS=4
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
+perf stat -d ./pilieb_mp_nvc
 
 echo "C++ OMP with 2 threads"
 export OMP_NUM_THREADS=2
@@ -41,5 +44,6 @@ export OMP_NUM_THREADS=2
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
 ./pilieb_mp_nvc
+perf stat -d ./pilieb_mp_nvc
 
 

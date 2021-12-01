@@ -1,45 +1,152 @@
 C++ OMP with 16 threads
-Pi is approximately 3.141592654516639271378e+00
-Time taken: 0.534462
+Pi is approximately 3.141592654516642824092e+00
+Time taken: 0.532557
+ secondsPi is approximately 3.141592654516639271378e+00
+Time taken: 0.519489
+ secondsPi is approximately 3.141592654516639271378e+00
+Time taken: 0.589558
+ secondsPi is approximately 3.141592654516639271378e+00
+Time taken: 0.513572
  secondsPi is approximately 3.141592654516635718664e+00
-Time taken: 0.803729
- secondsPi is approximately 3.141592654516639271378e+00
-Time taken: 0.754942
- secondsPi is approximately 3.141592654516639271378e+00
-Time taken: 0.563422
- secondsPi is approximately 3.141592654516642824092e+00
-Time taken: 0.571473
- secondsC++ OMP with 8 threads
-Pi is approximately 3.141592654515353189026e+00
-Time taken: 0.640527
- secondsPi is approximately 3.141592654515353189026e+00
-Time taken: 1.007433
- secondsPi is approximately 3.141592654515353189026e+00
-Time taken: 0.534466
- secondsPi is approximately 3.141592654515353189026e+00
-Time taken: 0.565378
- secondsPi is approximately 3.141592654515356741740e+00
-Time taken: 0.628497
- secondsC++ OMP with 4 threads
-Pi is approximately 3.141592654512628257635e+00
-Time taken: 1.060777
- secondsPi is approximately 3.141592654512631810348e+00
-Time taken: 1.036895
- secondsPi is approximately 3.141592654512631810348e+00
-Time taken: 1.092476
- secondsPi is approximately 3.141592654512631810348e+00
-Time taken: 1.038943
- secondsPi is approximately 3.141592654512628257635e+00
-Time taken: 1.038002
- secondsC++ OMP with 2 threads
-Pi is approximately 3.141592654515921623215e+00
-Time taken: 1.976249
- secondsPi is approximately 3.141592654515921623215e+00
-Time taken: 1.977094
- secondsPi is approximately 3.141592654515921623215e+00
-Time taken: 1.965003
- secondsPi is approximately 3.141592654515921623215e+00
-Time taken: 1.986117
- secondsPi is approximately 3.141592654515921623215e+00
-Time taken: 1.988923
+Time taken: 0.494540
+ secondsPi is approximately 3.141592654516635718664e+00
+Time taken: 0.665460
  seconds
+ Performance counter stats for './pilieb_mp_nvc':
+
+           7080.15 msec task-clock:u              #   10.584 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+               537      page-faults:u             #    0.076 K/sec                  
+       21029710822      cycles:u                  #    2.970 GHz                      (37.46%)
+          18594181      stalled-cycles-frontend:u #    0.09% frontend cycles idle     (37.41%)
+       11655555880      stalled-cycles-backend:u  #   55.42% backend cycles idle      (37.37%)
+       42658129219      instructions:u            #    2.03  insn per cycle         
+                                                  #    0.27  stalled cycles per insn  (37.48%)
+       13350450376      branches:u                # 1885.616 M/sec                    (37.57%)
+           4328102      branch-misses:u           #    0.03% of all branches          (37.62%)
+       15717291973      L1-dcache-loads:u         # 2219.908 M/sec                    (37.57%)
+            284565      L1-dcache-load-misses:u   #    0.00% of all L1-dcache hits    (37.52%)
+   <not supported>      LLC-loads:u                                                 
+   <not supported>      LLC-load-misses:u                                           
+
+       0.668961709 seconds time elapsed
+
+       6.443695000 seconds user
+       0.578022000 seconds sys
+
+
+C++ OMP with 8 threads
+Pi is approximately 3.141592654515360294454e+00
+Time taken: 0.503436
+ secondsPi is approximately 3.141592654515353189026e+00
+Time taken: 0.487151
+ secondsPi is approximately 3.141592654515353189026e+00
+Time taken: 0.487054
+ secondsPi is approximately 3.141592654515356741740e+00
+Time taken: 0.567223
+ secondsPi is approximately 3.141592654515356741740e+00
+Time taken: 0.551249
+ secondsPi is approximately 3.141592654515353189026e+00
+Time taken: 0.486892
+ seconds
+ Performance counter stats for './pilieb_mp_nvc':
+
+           3893.76 msec task-clock:u              #    7.948 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+               500      page-faults:u             #    0.128 K/sec                  
+       12668234804      cycles:u                  #    3.253 GHz                      (37.56%)
+            257654      stalled-cycles-frontend:u #    0.00% frontend cycles idle     (37.43%)
+       10471531118      stalled-cycles-backend:u  #   82.66% backend cycles idle      (37.34%)
+       12987990446      instructions:u            #    1.03  insn per cycle         
+                                                  #    0.81  stalled cycles per insn  (37.34%)
+        1116872770      branches:u                #  286.837 M/sec                    (37.51%)
+             21701      branch-misses:u           #    0.00% of all branches          (37.62%)
+        7550395918      L1-dcache-loads:u         # 1939.102 M/sec                    (37.60%)
+              1428      L1-dcache-load-misses:u   #    0.00% of all L1-dcache hits    (37.59%)
+   <not supported>      LLC-loads:u                                                 
+   <not supported>      LLC-load-misses:u                                           
+
+       0.489922092 seconds time elapsed
+
+       3.860051000 seconds user
+       0.004976000 seconds sys
+
+
+C++ OMP with 4 threads
+Pi is approximately 3.141592654512631810348e+00
+Time taken: 0.989474
+ secondsPi is approximately 3.141592654512631810348e+00
+Time taken: 0.970285
+ secondsPi is approximately 3.141592654512628257635e+00
+Time taken: 0.970562
+ secondsPi is approximately 3.141592654512631810348e+00
+Time taken: 0.968022
+ secondsPi is approximately 3.141592654512628257635e+00
+Time taken: 0.970862
+ secondsPi is approximately 3.141592654512628257635e+00
+Time taken: 0.971177
+ seconds
+ Performance counter stats for './pilieb_mp_nvc':
+
+           3885.76 msec task-clock:u              #    3.987 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+               482      page-faults:u             #    0.124 K/sec                  
+       12665203160      cycles:u                  #    3.259 GHz                      (37.39%)
+            100495      stalled-cycles-frontend:u #    0.00% frontend cycles idle     (37.41%)
+       10476556392      stalled-cycles-backend:u  #   82.72% backend cycles idle      (37.50%)
+       13031988904      instructions:u            #    1.03  insn per cycle         
+                                                  #    0.80  stalled cycles per insn  (37.59%)
+        1181495529      branches:u                #  304.058 M/sec                    (37.65%)
+             40823      branch-misses:u           #    0.00% of all branches          (37.58%)
+        7557412741      L1-dcache-loads:u         # 1944.901 M/sec                    (37.49%)
+              2973      L1-dcache-load-misses:u   #    0.00% of all L1-dcache hits    (37.40%)
+   <not supported>      LLC-loads:u                                                 
+   <not supported>      LLC-load-misses:u                                           
+
+       0.974604782 seconds time elapsed
+
+       3.850115000 seconds user
+       0.004967000 seconds sys
+
+
+C++ OMP with 2 threads
+Pi is approximately 3.141592654515921623215e+00
+Time taken: 1.934045
+ secondsPi is approximately 3.141592654515921623215e+00
+Time taken: 1.939750
+ secondsPi is approximately 3.141592654515921623215e+00
+Time taken: 1.937554
+ secondsPi is approximately 3.141592654515921623215e+00
+Time taken: 1.939490
+ secondsPi is approximately 3.141592654515921623215e+00
+Time taken: 1.940038
+ secondsPi is approximately 3.141592654515921623215e+00
+Time taken: 1.938161
+ seconds
+ Performance counter stats for './pilieb_mp_nvc':
+
+           3878.10 msec task-clock:u              #    1.997 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+               511      page-faults:u             #    0.132 K/sec                  
+       12657220198      cycles:u                  #    3.264 GHz                      (37.45%)
+            133968      stalled-cycles-frontend:u #    0.00% frontend cycles idle     (37.48%)
+       10478829213      stalled-cycles-backend:u  #   82.79% backend cycles idle      (37.50%)
+       12961347066      instructions:u            #    1.02  insn per cycle         
+                                                  #    0.81  stalled cycles per insn  (37.55%)
+        1102368951      branches:u                #  284.255 M/sec                    (37.55%)
+             11677      branch-misses:u           #    0.00% of all branches          (37.53%)
+        7528272367      L1-dcache-loads:u         # 1941.227 M/sec                    (37.48%)
+                 8      L1-dcache-load-misses:u   #    0.00% of all L1-dcache hits    (37.45%)
+   <not supported>      LLC-loads:u                                                 
+   <not supported>      LLC-load-misses:u                                           
+
+       1.941477457 seconds time elapsed
+
+       3.845076000 seconds user
+       0.003973000 seconds sys
+
+
