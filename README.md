@@ -27,10 +27,23 @@ Code for Python requires
 CONFIGURATION
 -------------
 
+INIT
+  Login to bridges - 2
+  module load nvhpc/21.7
+
 Code for C++
 
 Code for C
-  
+  scp the content of c onto bridges - 2
+    scp -P 2222 -r . name@data.bridges2.psc.edu:/jet/home/name/372_fall2021/
+  For getting all the executable needed for c (Note, bridges - 2 must finish this step to proceed to other)
+    sbatch init
+  For getting bench test for time
+    //All time can be found by using more on the corresponding .out file
+    sbatch GPU-BENCH //This gets the time needed for OpenACC GPU
+    sbatch CPU-BENCH //This gets the time needed for OpenACC CPU and OpenMP CPU for 2, 4, 8, 16 core, and Serial time
+  For getting profile
+    
 
 Code for Python
 
